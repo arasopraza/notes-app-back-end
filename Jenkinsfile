@@ -4,8 +4,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        nvm install
-        npm install
+        sh 'nvm install'
+        sh 'npm install'
       }
     }
 
