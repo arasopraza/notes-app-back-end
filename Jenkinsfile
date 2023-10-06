@@ -4,7 +4,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh '''
+                    export NVM_DIR="$HOME/.nvm"
+                    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+                    nvm use 18.17.1
+                '''
             }
         }
         stage('Deployment') {
