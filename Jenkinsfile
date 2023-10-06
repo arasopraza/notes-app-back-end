@@ -12,7 +12,7 @@ pipeline {
     stage('Deploy') {
       steps {
         // Deploy the application
-         sh 'npm run start-prod'
+        sh 'npm run start-prod'
       }
     }
   }
